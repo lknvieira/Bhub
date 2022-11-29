@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  bhub.api:
+    image: ${DOCKER_REGISTRY-}bhubapi
+    build:
+      context: .
+      dockerfile: Bhub.Api/Dockerfile
+    ports:
+        - "5000:443"
